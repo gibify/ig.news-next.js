@@ -12,4 +12,4 @@
 git clone https://github.com/gibifyofficial/ig.news-next.js.git
 ```
 
-After this you can open it on [Visual Studeo Code](https://code.visualstudio.com/)
+After this you can open it on [Visual Studio Code](https://code.visualstudio.com/)
