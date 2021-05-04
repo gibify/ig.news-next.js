@@ -5,3 +5,11 @@
   <img src="https://github.com/gibifyofficial/ig.news-next.js/blob/main/public/images/Interna de Post.png" />
   <img src="https://github.com/gibifyofficial/ig.news-next.js/blob/main/public/images/Interna de Post (não logado).png" />
 </div>
+
+## To clone this project
+
+```
+git clone 
+```
+
+After this you can open it on [Visual Studeo Code]()
