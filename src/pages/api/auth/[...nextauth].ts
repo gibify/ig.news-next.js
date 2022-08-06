@@ -1,8 +1,6 @@
-import { query as q } from 'faunadb';
-
+import { query } from 'faunadb';
 import NextAuth from 'next-auth';
 import Providers from 'next-auth/providers';
-
 import { fauna } from '../../../services/faunadb';
 
 export default NextAuth({
@@ -22,23 +20,23 @@ export default NextAuth({
 
      try { 
       await fauna.query(
-        q.If(
-          q.Not(
-            q.Exists(
-              q.Match(
-                q.Index('user_by_email'),
-                q.Casefold(user.email)
+        query.If(
+          query.Not(
+            query.Exists(
+              query.Match(
+                query.Index('user_by_email'),
+                query.Casefold(user.email)
               )
               )
             ),
-          q.Create(
-            q.Collection('users'),
+          query.Create(
+            query.Collection('users'),
             { data: { email }}
           ),
-            q.Get(
-            q.Match(
-            q.Index('user_by_email'),
-            q.Casefold(user.email)
+            query.Get(
+            query.Match(
+            query.Index('user_by_email'),
+            query.Casefold(user.email)
             )
           )
         )
